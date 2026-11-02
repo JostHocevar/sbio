@@ -61,12 +61,27 @@ Difrakcijski podatki so bili posneti pod krio-pogoji, sprocesirani (prostorska s
 ## Potek vaje
 
 1. Pojdite na spletno stran [Moorhen.org](https://moorhen.org/).
-2. Naložite PDB (koordinate) in MTZ (strukturni faktorji, karte elektronske gostote) datoteki (`"hamburger menu" > File > Open Files`), [prenešeni s te spletne strani](difrakcijski-podatki).
-3. Spremenite prikaz proteina iz načina 'Ribbons' v 'Bonds': `Models` >  ikona svinčnika...
-4. Koordinate povežite s kartami: `"hamburger menu" > File > Associate reflections to map...`.
-5. 
+2. Naložite PDB (koordinate) in MTZ datoteki (strukturni faktorji, karte elektronske gostote) (`"hamburger menu" > File > Open Files`), [prenešeni s te spletne strani](difrakcijski-podatki).
+   - Datoteki lahko naložite hkrati (obe označite pri odpiranju) ali pa eno za drugo.
+3. Oglejte si, kako se elektronska gostota nadaljuje "v neskončnost".
+4. Omogočite izračun R-faktorja in osveževanje kart elektronske gostote tako, da naložene karte in podatke povežete s strukturo: `File > Connect Molecule and Maps... > Ok`
+5. Spremenite prikaz proteina iz načina 'Ribbons' v 'Bonds' (sicer ne vidite posameznih ostankov): `Models` >  ikona svinčnika...
+6. Vklopite prikaz atomov iz sosednjih asimetričnih enot: `Models > (zobnik) > Cell and Symmetry > Show symmetry mates`.
+7. Nastavite nivo konturiranja diferenčne karte elektronske gostote ($F_o – F_c$) na pribl. RMSD 3,4–3,5: `Maps`, uporabite drsnik pri karti KPC2avi.-map-1.
+8. Z orodji, ki jih najdete pod `Validation`, analizirajte ujemanje modela strukture z elektronsko gostoto in stereokemijskimi parametri, na primer:
+   - `Difference Map Peaks...` vam pokaže, kje v strukturi nekaj manjka (zeleno obarvana diferenčna karta el. gostote) oz. je tam, kjer ne bi smelo biti (rdeče obarvana diferenčna karta el. gostote)),
+   - `Ramachandran Plot...` vam pokaže, kateri ostanki so izven favoriziranih in dovoljenih območij kombinacij dihedralnih kotov glavne verige,
+   - `Unmodelled Blobs...` vam poišče "oblačke" elektronske gostote, ki niso zapolnjeni z atomi (torej v modelu strukuture tam nekaj manjka),
+   - idr.
+   - Nekaj napak v strukturi vam razkrije že vklop "Ramachandran Balls" in "Contact Dots" (s slednjim lahko identificirate atome, ki sicer niso kovalentno povezavi, so si pa preblizu): `Models > Tools > (različne možnosti)`.
+9. V model strukture dodajte tudi manjkajoča liganda – eden izmed njih je komponenta kristalizacijskega pufra (jo lahko prepoznate po obliki oblačka elektronske gostote?), drugi pa inhibitor encima.
+10. **Priporočeno je, da med delom občasno shranite koordinate ali kar celotno sejo, saj boste vse popravke izgubili, če se vam brskalnik sesuje ali ga po nesreči zaprete!**
+11. Ko boste z delom končali shranite koordinate popravljenega modela strukture in ga primerjajte (npr. preko vrednosti RMSD) z v zbirko PDB deponiranimi koordinatami: [KPC2avi-orig-clean.pdb](datoteke/KPC2avi-orig-clean.pdb).
+    - Za superpozicijo lahko uporabite [PDB Pairwise Structure Alignment](https://www.rcsb.org/alignment) (pri simbolu smetnjaka kliknite na puščico in izberite `File Upload`; kot referenčno strukturo lahko vpišete kar koto PDB 4ZBE) ali pa UCSG ChimeraX.
+
+Primer popravljanja modela strukture:
 
 
+---
 
-
-Vklopite prikaz simetrijsko povezanih molekul v drugih asimetričnih enotah.
+Za pripravo datotek za vaje so bili uporabljeno javno dostopni podatki iz članka **Inhibition of Klebsiella beta-Lactamases (SHV-1 and KPC-2) by Avibactam: A Structural Study** {cite:p}`Emsley2010aaa`.
