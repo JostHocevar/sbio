@@ -39,9 +39,9 @@ V tej vaji modeliramo **interakcijo dveh proteinov**, IL-7 in zunajceličnega de
 
 **2. Vizualizacija prečnih povezav**
 
-1. V ChimeraX odprite `IL7.pdb` in `IL7R.pdb`.
+1. V ChimeraX odprite [IL7.pdb](datoteke/IL7.pdb) in [IL7R.pdb](datoteke/IL7R.pdb).
 2. **Tools → Structure Analysis → XMAS**.
-2. V **Evidence files → Import files** uvozite `BS3.tsv` in `EDC.tsv`.
+2. V **Evidence files → Import files** uvozite [BS3.tsv](datoteke/BS3.tsv) in [EDC.tsv](datoteke/EDC.tsv).
 3. V **Molecular models** izberite oba proteina, v **Evidence files** obe tabeli in uporabite **Map crosslinks**.
 4. V **Crosslink models** poiščite povezave iz obeh datotek. Pričakujemo **4 povezave BS3** in **1 povezavo EDC**. 
 5. Pokažite najprej samo BS3, nato samo EDC in nazadnje vse povezave. Ali povezave nakazujejo, preko katere površine protein interagirata?
